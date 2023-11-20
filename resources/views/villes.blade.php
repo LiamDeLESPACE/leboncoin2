@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <form action="/recherche_annonce" method="GET" role="search">
+    <form action="/annonces/" method="post" role="search">
     {{ csrf_field() }}
         <input list="html_elements" name="villeChoisie">
             <datalist id="html_elements">

@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AnnonceController;
 use App\Http\Controllers\VilleController;
+use App\Http\Controllers\TypeLogementController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,4 +18,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [VilleController::class, "getVilles"]);
 
-Route::get('/recherche_annonce', [AnnonceController::class, "showAnnonce"]);
+Route::post('/annonces', [AnnonceController::class, "showAnnonces"]);
+Route::get('/annonces/{id}', [TypeLogementController::class, "getTypesLogement"]);
