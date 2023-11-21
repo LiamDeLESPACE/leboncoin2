@@ -11,4 +11,8 @@ class Annonce extends Model
     protected $table = "annonce";
     protected $primaryKey = "idannonce";
     public $timestamps = false;
+
+    public function adresse() {
+        return $this->belongsTo(Adresse::class, 'idadresse', 'idadresse');
+    }
 }

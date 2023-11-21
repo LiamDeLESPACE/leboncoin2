@@ -16,7 +16,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [VilleController::class, "getVilles"]);
+Route::post('/', [AnnonceController::class, "getAnnonces"]);
 
-Route::post('/annonces', [AnnonceController::class, "showAnnonces"]);
+Route::get('/annonces/{id}', [AnnonceController::class, "showAnnonces"]);
+
 Route::get('/annonces/{id}', [TypeLogementController::class, "getTypesLogement"]);
