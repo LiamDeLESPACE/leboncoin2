@@ -44,8 +44,8 @@ class AnnonceController extends Controller
 
     public function getAnnonces()
     {
-        $annonces = Annonce::all();
         $villes = Ville::all();
+        $annonces = Annonce::all();
 
         return view('annonces', [
             "annonces" => $annonces],

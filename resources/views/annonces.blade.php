@@ -7,18 +7,18 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>          
-                <form method="POST" action="/" role="search">
+                <form method="GET" action="/" role="search">
                     <input list="html_elements">
-                    <datalist id="html_elements" name="codeinsee>
+                    <datalist id="html_elements" name="codeinsee">
                     @foreach ($villes as $ville)
                     @csrf
-                        <option value="{{ $ville->codeinsee }}">"{{ $ville->nomville  .' ('. $ville->codepostalville .')'}}"</option>
+                        <option value="{{ $ville->nomville  .' ('. $ville->codepostalville .')'}}">"{{ $ville->codeinsee }}"</option>
                     @endforeach
                     </datalist>
                     <button type="submit">Rechercher</button>    
                 </form>
                 @foreach ($annonces as $annonce)
-                @if({{ $ville->codeinsee }} == $_POST["codeinsee"]){echo "<h2>{{ $annonce->titreannonce }}</h2>"}
+                    <a href="annonce/{{ $annonce->idannonce}}">{{ $annonce->titreannonce }}</a><br>
                 @endforeach
 
 </body>
