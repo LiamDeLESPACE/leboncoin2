@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\DB;
 use App\Models\Ville;
 use App\Models\Annonce;
+use App\Models\Addresse;
 use Illuminate\Http\Request;
 
 class AnnonceController extends Controller
@@ -29,27 +30,24 @@ class AnnonceController extends Controller
         ]);
     }*/
 
-    /*public function showAnnonces($id) {
-        
+    public function showAnnonces(Request $request) {
+        $request->get('codeinsee');
+
         $annonces = DB::table('annonce')
             ->join('adresse', 'annonce.idadresse', '=', 'adresse.idadresse')
-            ->where('adresse.codeinsee', '=', '{{ $id }}')
+            ->where('adresse.codeinsee', '=', 'codeinsee')
             ->select('annonce.*', 'adresse.*')
             ->get();
-        
-            return view('annonces', [
-                "annonces" => $annonces
-            ]);
-    }*/
+        return view('annonces', [
+            "annonces" => $annonces]
+        );
+    }
 
     public function getAnnonces()
     {
         $villes = Ville::all();
-        $annonces = Annonce::all();
 
-        return view('annonces', [
-            "annonces" => $annonces],
-            ["villes" => $villes]
+        return view('annonces', ["villes" => $villes]
         );
     }
 }
