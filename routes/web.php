@@ -3,6 +3,8 @@
 use App\Http\Controllers\AnnonceController;
 use App\Http\Controllers\VilleController;
 use App\Http\Controllers\TypeLogementController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\CreateAccountController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,8 +18,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [AnnonceController::class, "getAnnonces"]);
+Route::get('/', [VilleController::class, "getVilles"]);
 
-Route::post('/annonces/listeVille', [AnnonceController::class, "showAnnonces"]);
+Route::any('/login', [LoginController::class, "showLogin"]);
+
+Route::any('/create-account', [CreateAccountController::class, "showCreateAccount"]);
+
+Route::post('/annonces', [AnnonceController::class, "showAnnonces"])->name("annonces");
 
 Route::get('/annonces/', [TypeLogementController::class, "getTypesLogement"]);

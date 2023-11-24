@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Model;
      protected $primaryKey = "codeinsee";
      public $timestamps = false;
 
-    public function adresses() {
+    public function getAdresses() {
         return $this->hasMany(Adresse::class, 'codeinsee', 'codeinsee');
     }
  }

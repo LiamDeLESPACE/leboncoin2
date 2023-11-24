@@ -6,16 +6,13 @@
     <title>Annonces</title>
     <link rel="stylesheet" href="/style.css">
 </head>
-<body>              
-    <form method="post" action="annonces/listeVille" role="search">
-        <input list="html_elements" name="codeinsee">
-        <datalist id="html_elements">
-        @foreach ($villes as $ville)
-        @csrf
-            <option value="{{ $ville->codeinsee }}">"{{ $ville->nomville  .' ('. $ville->codepostalville .')'}}"</option>
-        @endforeach     
-        </datalist>
-        <button type="submit">Rechercher</button>   
-    </form>
+<body>
+    @csrf
+        <h1>{{$ville->nomville}}</h1>  
+    
+    @foreach ($annonces as $annonce)
+    @csrf
+        <a href="annonce/{{$annonce->idannonce}}">{{$annonce->titreannonce}}</a>
+    @endforeach             
 </body>
 </html>
