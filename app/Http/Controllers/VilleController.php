@@ -10,9 +10,11 @@ class VilleController extends Controller
     public function getVilles()
     {
         $villes = Ville::all();
+        
 
-        return view('villes', [
-            "villes" => $villes
-        ]);
+        return view('villes')            
+            ->with(['villes'=>$villes]);
+            
+        
     }
 }

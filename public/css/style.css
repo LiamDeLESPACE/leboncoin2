@@ -1,0 +1,449 @@
+
+ /*--------------------------------HAUT DE TOUTES LES PAGES ------------------------------------------------------*/
+ @font-face {
+    font-family: 'full_sans_sc90_bold';
+    src: url('/css/bmw.woff2') format('woff2'),
+         url('/css/bmw.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.titre{
+  font-family: 'full_sans_sc90_bold';
+  /*color: rgb(33, 33, 172);*/
+}
+
+#logo-banner{
+  height: 10vh;
+  width:auto;
+  vertical-align: top;
+  float: right;
+  margin-right: 0vw;
+  }
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f3f3f3;
+    
+  }
+
+.mainul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #bebebe;
+  }
+  
+li {
+    display: inline-block;
+
+  }
+  
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-out 100ms
+  }
+  
+li a:hover {
+    background-color: #9f9f9f;
+  }
+
+.mainli{
+    display: inline-block;
+
+    background-color: #bebebe;
+  }
+
+.top {
+    text-decoration: none;
+    padding: 10px;
+    font-family: 'bmw', Arial, sans-serif;
+    color: #fff;
+    background: #000;
+    border-radius: 100px;
+    position: sticky;
+    bottom: 20px; 
+    --offset: 100px; 
+    margin-top: calc(100vh + var(--offset));
+    margin-left: calc(140vh + var(--offset)); 
+    transition: all 1s ease-out;   
+  }  
+
+html * {
+    font-family: 'bmw', Verdana, sans-serif;
+    
+    font-weight:normal;
+    font-style:normal;
+    }
+
+html{
+  scroll-behavior: smooth;
+}
+
+h2{
+  font-family: 'full_sans_sc90_bold';
+  /*color: rgb(33, 33, 172);*/
+}
+ 
+/*details moto a bouger*/
+.boutonDetailsMoto{
+  width: 40vw;
+  height: 20vh;
+  border: none;
+  outline: none;
+  background-color: #b1e0f0;
+  color: #000000;
+  font-weight: 300;
+  transition: background-color 0.3s ease-out 100ms;
+  grid-area: bouton;
+  text-decoration: none;
+  font-size: large;
+}
+
+.boutonDetailsMoto:hover{
+  background-color:#5ba8db;
+}
+
+.divMoto{
+  font-size: large;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "image nom"
+    "image desc"
+    "image prix"
+    "image bouton";  
+}
+
+.photo{
+  height:400px;
+  margin:auto;
+  grid-area: image;
+  transition: ease-in-out 100ms ;
+  height: fit-content;
+  margin-left: 0vw;
+  }
+
+.nomMoto{
+  font-weight: bolder;
+  font-size: xx-large ;
+
+  width: fit-content;
+  grid-area: nom ;
+  margin-right: 0px;
+}
+.descmoto{ 
+  width: fit-content;
+  text-align: justify;
+  grid-area: desc ;
+}
+
+.prixMoto{
+  font-size: large;
+  font-weight: bold;
+
+  grid-area: prix;
+  /*margin-right: 20vh;*/
+}
+
+
+
+#logo{
+  height: 30px;
+  width: 30px;
+  vertical-align: center;
+
+}
+
+
+  .photo {
+  text-align:center;
+  display:block;
+  overflow:hidden;
+  border:1px solid #000;
+  }
+  .photo img {
+
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  }
+  .photo img:hover {
+
+  transform:scale(1.1);
+
+  }
+
+
+/*------------------------------------------------------Compte client-----------------------------------------------------*/
+.compte{
+  font-size: large;
+  /*background-color: rgb(119, 119, 119);*/
+  display: flex;
+}
+  
+.profilpremierniveau{
+  display: flex;
+}
+.titreMonMrofil{
+  height:400px;
+  margin:auto;
+}
+
+.titreMonMrofil div {
+  text-align:center;
+}
+
+.titreMonMrofil img {
+  width:300px;
+  height:225px;
+}
+  
+
+.compteTitreInfosPerso{
+  margin-top: 0px;
+  background-color: #c9c9c9;
+  color: #000000;
+}
+.compteTitreInfosPerso:hover{
+  background-color:#8a8a8a;
+}
+.compte-infos-perso{
+  grid-area: infosp;
+  border: solid black 1.5px;
+  margin-bottom: 20vh;
+}
+
+.compte-infos-identifiants{
+  grid-area: id;
+  border: solid black 1.5px;
+  margin-right: 30px;
+}
+
+
+.compte-infos-preferences{
+  grid-area: prefs;
+  border: solid black 1.5px;
+  margin-right: 5vh;
+
+}
+
+.boutonModifProfil{
+  width: auto;
+  height: auto;
+  border: none;
+  outline: none;
+  background-color: #b1e0f0;
+  color: rgb(0, 168, 235);
+  font-weight: 300;
+  transition: background-color 0.3s ease-out 100ms;
+  grid-area: bouton;
+  text-decoration: none;
+  font-size: large;
+}
+
+.boutonModifProfil:hover{
+  text-decoration-color: #1b1b1b;
+  background-color:#9ebfd4;
+}
+
+.photoprofil{
+    width: 20vw;
+    height: auto;
+    max-width: 20vw;
+    max-height: 30vh;
+    min-width: 20vw;
+    min-height: 30vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: solid black 1.5px;
+}
+
+/*---------------------------------------------------------DETAILS MOTO-------------------------------------------------------------*/
+
+
+.photo2{
+  height:fit-content;
+  width: min-content;
+  transition: ease-in-out 100ms ;
+  text-align:center;
+  display:block;
+  overflow:hidden;
+  border:1px solid #000;
+  grid-area: img;
+  }
+
+  .photo2 img {
+
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  }
+  .photo2 img:hover {
+
+  transform:scale(1.1);
+
+  }
+
+.detailsMoto{
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "img detailsMoto"
+    "img 1"
+    "img 2"
+    "img 3";  
+}
+
+#infosDetailsMoto{
+  /*background-color: rgb(211, 211, 211);*/
+  /*border: 1px black;*/
+
+  font-size: large;
+  grid-area: detailsMoto;
+  text-align: left;
+}
+#infosDetailsMoto1{
+  /*background-color: rgb(211, 211, 211);*/
+  border: 1px black;
+
+  font-size: large;
+  grid-area: 1;
+}
+
+#infosDetailsMoto2{
+  grid-area: 2;
+}
+
+#infosDetailsMoto3{
+  grid-area: 3;
+}
+/*
+#selectCouleur{
+grid-area: couleurs;
+}
+*/
+/*----------------------------------------------------------LIGHTBOX---------------------------------------------------------------------------
+*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  height: 3000px;
+}
+img.lightbox {
+ 
+  cursor: zoom-in;
+}
+
+#bg {
+  position: sticky;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#lightbox {
+  position: sticky;
+  left: 0;
+  top: 0;
+  padding: 3rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#lightbox img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#lightbox #close {
+  position: sticky;
+  bottom: 100vh;
+  left: 155vh;
+  height: 20px;
+  width: 20px;
+  margin: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 2rem;
+  background: rgba(175, 175, 175, 0.486);
+  border-radius: 50%;
+  user-select: none;
+  color: rgb(161, 36, 4);
+} 
+
+#lightbox #suivant {
+  position: sticky ;
+  bottom: 10vh;
+  margin: 1rem;
+  padding: 1rem;
+  height: 50px;
+  width: 50px;
+  margin-right: 0px;
+  cursor: pointer;
+  font-size: 2rem;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+  user-select: none
+} 
+#lightbox #precedent {
+  position: sticky ;
+  bottom: 30vh;
+  margin: 1rem;
+  padding: 1rem;
+  height: 50px;
+  width: 50px;
+  margin-right: 0px;
+  cursor: pointer;
+  font-size: 2rem;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+  user-select: nonef
+}
+
+.dpt{
+  color: transparent; 
+  background-color: transparent; 
+  border-color: transparent; 
+  cursor: pointer;
+  grid-area: btn;
+}
+
+.textField{
+margin-left: 0;
+  border: none;
+  outline: none;
+  color: #000000;
+  font-weight: 300;
+
+  text-decoration: none;
+  grid-area: txt;
+
+}
+
+
+
+

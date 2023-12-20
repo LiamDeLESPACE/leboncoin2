@@ -12,15 +12,25 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    protected $table = "compteutilisateur";
+    public $timestamps = false;
+    protected $primaryKey = "idc_u";
     /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+
+        'idc_u',
+        'idutilisateur',
+        'pseudoprofil',
+        'mailparticulier',
+        'motdepasseprofil',
+        'telprofil',
+        'telverifier',
+        'ceodeetatcu',
+        'siret',
     ];
 
     /**
@@ -29,7 +39,7 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $hidden = [
-        'password',
+        'motdepasseprofil',
         'remember_token',
     ];
 
@@ -42,4 +52,13 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function getAuthPassword() {
+        return $this->motdepasseprofil;
+    }
+
+    // public function idc_u(): HasOne
+    // {
+    //     return $this->hasOne(Idc_u::class);
+    // }
 }

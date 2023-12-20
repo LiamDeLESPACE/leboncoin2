@@ -11,4 +11,14 @@ class TypeLogement extends Model
     protected $table = "typelogement";
     protected $primaryKey = "idtypelogement";
     public $timestamps = false;
+
+    protected $fillable = [
+        'idtypelogement',
+        'libelletypelogement'
+    ];
+
+    public function getAnnonces(){
+        return $this->belongsTo(Annonce::class, 'idtypelogement', 'idtypelogement');
+    }
+
 }

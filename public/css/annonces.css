@@ -1,0 +1,31 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+h1{
+  text-align: center;
+}
+
+img {
+    padding: 5px;
+    width: 150px;
+  }
+
+  aside {
+    width: 20%; /* ajustez la largeur selon vos besoins */
+    float: right; /* déplacer l'aside à gauche */
+  }
+div.annonces{
+  width: min-content;
+  height: min-content;
+}
+
+button.typelogement{
+  display: inline-block;
+}
+.filtres {
+  position: fixed;
+  top: 0;
+  right: 0;
+}

@@ -1,0 +1,23 @@
+
+.container {
+    width: auto;
+    height: auto;
+    margin: auto;
+    
+}
+.center-form{
+    text-align: center;
+}
+.password-container {
+    position: relative;
+}
+
+
+.toggle-password-img {
+    position: absolute;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    padding-top: 22px;
+}

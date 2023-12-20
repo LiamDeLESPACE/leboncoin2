@@ -10,9 +10,11 @@ class Adresse extends Model
     use HasFactory;
     protected $table = "adresse";
     protected $primaryKey = 'idadresse';
-    protected $timestamp = false;
+    protected $fillable = ['idadresse', 'codeinsee', 'adresserue', 'adressenum', 'paysadresse'];
+    public $timestamps = false;
+
 
     public function getAnnonces() {
-        return $this->hasMany(Annonce::class, 'idadresse', 'idadresse');
+        return $this->HasOne(Annonce::class, 'idadresse', 'idadresse');
     }
 }
